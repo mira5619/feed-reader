@@ -55,10 +55,7 @@ $(function() {
                 expect(allFeeds[i].name).toBeDefined();
 
                 //and that the name is not empty
-                expect(allFeeds[i].name.length).toBeGreaterThan(0);
-
-                //and it is string
-                expect(typeof allFeeds[i].name).toBe('string');
+                expect(allFeeds[i].name).not.toBe('');
             }
         });
     });
