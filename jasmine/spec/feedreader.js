@@ -39,10 +39,7 @@ $(function() {
                 expect(allFeeds[i].url).toBeDefined();
 
                 //and that the URL is not empty
-                expect(allFeeds[i].url.length).not.toBe(0);
-
-                //and it is string
-                expect(typeof allFeeds[i].url).toBe('string');
+                expect(allFeeds[i].url).not.toBe('');
 
                 //and this is actually url
                 expect(allFeeds[i].url.slice(0,5)).toBe('http:');
