@@ -84,9 +84,7 @@ $(function() {
     /* test suite named "Initial Entries" */
     describe('Initial Entries', function() {
         beforeEach(function(done) {
-            for(var i = 0; i < allFeeds.length; i++){
-                loadFeed(i, done);
-               }
+                loadFeed(0, done);
             });
 
         /* a test that ensures when the loadFeed
@@ -95,9 +93,8 @@ $(function() {
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
         */
-        it('has at least single .entry element within .feed container', function(done) {
+        it('has at least single .entry element within .feed container', function() {
             expect($('.feed .entry').length).toBeGreaterThan(0);
-            done();
         });
     });
 
