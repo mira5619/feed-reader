@@ -116,11 +116,9 @@ $(function() {
         it('when new feed is loaded content changes', function(done) {
             loadFeed(0, function() {
                 feed0 = $('.feed').text();
+                expect(feed1).not.toEqual(feed0);
                 done();
             });
-
-            expect(feed1).not.toEqual(feed0);
-
         });
     });
 }());
